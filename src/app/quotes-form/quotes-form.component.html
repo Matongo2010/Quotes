@@ -1,6 +1,6 @@
 <div class="container-fluid">
     <h2 class="text-center">Share your Quote</h2>
-    <form #quotesForm='ngForm'>
+    <form #quotesForm='ngForm' (ngSubmit)='submitQuote()' quoteForm='ngForm'>
         <div class="form-group">
 
             <label for="name">Name</label>
