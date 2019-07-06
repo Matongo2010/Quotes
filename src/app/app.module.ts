@@ -19,7 +19,7 @@ import { VoterDirective } from './voter.directive';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
     FormsModule,
   ],
   providers: [],

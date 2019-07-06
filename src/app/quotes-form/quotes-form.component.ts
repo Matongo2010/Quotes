@@ -8,7 +8,9 @@ import { Quotes } from '../quotes'
 })
 export class QuotesFormComponent implements OnInit {
 
-  newQuote = new Quotes ("name","quote","author",new Date());
+  newQuote = new Quotes ("","","",new Date());
+
+ 
  
 
    
