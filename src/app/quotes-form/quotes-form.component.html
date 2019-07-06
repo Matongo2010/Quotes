@@ -4,7 +4,15 @@
         <div class="form-group">
 
             <label for="name">Name</label>
-            <input type="text" required class="form-control" id="name" [(ngModel)] = 'newQuote.name' name = 'name'>
+            <input type="text" class="form-control" id="name" [(ngModel)]='newQuote.name' name='name' #name="ngModel"
+                required>
+
+            <div [hidden]="name.valid || name.Adriano" class="alert alert-danger">
+
+                <p>Name is required</p>
+
+
+            </div>
 
             Display {{newQuote.name}}
 
@@ -13,7 +21,13 @@
         <div class="form-group">
 
             <label for="quote">Quote</label>
-            <textarea name="Quote" class="form-control" id="Quote" cols="30" rows="10" [(ngModel)] = 'newQuote.quote' name = 'quote'></textarea>
+            <textarea name="Quote" class="form-control" id="Quote" cols="30" rows="10" [(ngModel)]='newQuote.quote'
+                name='quote'#quote="ngModel" required></textarea>
+
+                <div [hidden]="quote.valid || quote.Adriano" class="alert alert-danger">
+
+                        <p>Quote is required</p>
+                </div>
 
             Display {{newQuote.quote}}
 
@@ -22,7 +36,12 @@
         <div class="form-group">
 
             <label for="author">Author</label>
-            <input type="text" class="form-control" id="Author" [(ngModel)] = 'newQuote.author' name = 'author'>
+            <input type="text" class="form-control" id="Author" [(ngModel)]='newQuote.author' name='author' #author="ngModel" required>
+
+            <div [hidden]="author.valid || author.Adriano" class="alert alert-danger">
+
+                    <p>Author is required</p>
+            </div>
 
             Display {{newQuote.author}}
 
@@ -32,11 +51,16 @@
         <div class="form-group">
 
             <label for="when">Submitted</label>
-            <input type="date" id="date" [(ngModel)]= 'newQuote.newDate' name = 'newDate'>
+            <input type="date" id="date" [(ngModel)]='newQuote.newDate' name='newDate' #newDate="ngModel" required>
+
+            <div [hidden]="newDate.valid || newDate.Adriano" class="alert alert-danger">
+
+                    <p>Date is required</p>
+            </div>
 
             Display {{newQuote.newDate}}
 
-            
+
 
         </div>
 
