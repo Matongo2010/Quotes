@@ -1,6 +1,7 @@
 export class Quotes {
      id: number;
-     quote:string;
+     name:string;
+     description:string;
      
     }
     

@@ -10,29 +10,17 @@ import { Quotes } from '../quotes';
 })
 export class QuotesComponent implements OnInit {
 
-  quotes:Quotes = [
-  {id:1, quote:'If you have the right vision, and you take the right steps, then success is inevitable'},
-  {id:2, quote:'None but ourselves can free our minds'},
-  {id:3, quote:'One good thing about music, when it hits you, you feel no pain'},
+  quotes:Quotes[] = [
+  {id:1, name:'If you have the right vision, and you take the right steps, then success is inevitable', description:'Bob Collymore'},
+  {id:2, name:'None but ourselves can free our minds', description:'Bob Marley'},
+  {id:3, name:'One good thing about music, when it hits you, you feel no pain', description:'Bob Marley'},
   ];
  
 
-  }
-
-
-  constructor() { 
-    this.quotes = ['If you have the right vision, and you take the right steps, then success is inevitable', 'None but ourselves can free our minds', 'One good thing about music, when it hits you, you feel no pain'
-
-    
-    
+  
+  constructor() { }
 
   ngOnInit() {
   }
-
-  addNewQuote(quote) {
-    let nameLength = this.names.length;
-    let quoteLength = this.quotes.length;
-    quote.newDate = new Date(quote.newDate)
-    this.quotes.push(quote)
 
 }
