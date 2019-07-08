@@ -22,7 +22,7 @@ import { DateCountPipe } from './date-count.pipe';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
