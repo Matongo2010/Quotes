@@ -2,12 +2,11 @@
 <div>
     <h1>MyQuotes</h1>
     <ul>
-        <li *ngFor='let quote of quotes'>
-          {{quote.name}}
-          <app-quotes-detail [quote]='goal'></app-quotes-detail>
-        </li>
-    </ul>
-  </div>
-<app-quotes-form></app-quotes-form>
+        <div>*ngFor='let quote of quotes let i = index'>
+          <li>{{quote.name}}</li>
+          <button (click)='toggleDetails(i)'>Toggle Details</button>
+          <app-quotes-detail *ngIf='quote.showDescription' [quote]='quote' (isComplete) = 'completeQuote($event,i)'></app-quotes-detail>
 
-<app-quotes-details></app-quotes-details>
+        </div>
+    </ul>
+  
