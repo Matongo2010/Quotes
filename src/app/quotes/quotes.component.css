@@ -1,4 +1,9 @@
 #head{
-    background-color: lightseagreen;
+    background-color: aqua;
     font-size: 18mm
 }
+
+.row{
+    background-color: lightcyan
+}
+
