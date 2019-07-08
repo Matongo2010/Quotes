@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Quotes } from '../quotes';
 
 
 
@@ -9,7 +10,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QuotesComponent implements OnInit {
 
-  goals:string[];
+  quotes:Quotes = [
+  {id:1, quote:'If you have the right vision, and you take the right steps, then success is inevitable'},
+  {id:2, quote:'None but ourselves can free our minds'},
+  {id:3, quote:'One good thing about music, when it hits you, you feel no pain'},
+  ];
  
 
   }
